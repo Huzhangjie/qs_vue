@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script> -->
+</head>
+<body>
+  <!-- vue rederer
+  template -> pre complie -->
+  <!-- vue scope(只在这里起作用)
+   {{}} 占位符 正则去匹配 替换其中的数据 
+   数据改变刷新页面 要实时编译 node节点 -->
+  <div id="app">
+    <h2>{{title}}</h2>
+    <input v-model="name">
+    <h1>{{name}}</h1>
+    <button v-on:click="clickMe">click me!</button>
+  </div>
+  <script src="./observer.js"></script>
+  <script src="./watcher.js"></script>
+  <script src="./compile.js"></script>
+  <script src="./vue.js"></script>
+  <script>
+    const vm = new Vue({
+      el: "#app",
+      data: {
+        title: "Hello World",
+        name: "canfoo"
+      },
+      methods: {
+        clickMe () {
+          this.title = '你好!'
+        }
+      },
+      mounted () {
+        setTimeout(() => {
+          this.title = "what's up?"
+        }, 1000)
+      }
+    })
+  </script>
+</body>
+</html>
