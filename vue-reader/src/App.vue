@@ -2,20 +2,19 @@
   <div id="app">
     <read-header />
     <router-view/>
-    <!-- <read-tab /> -->
-    <i class="iconfont icon-fenlei"></i>
+    <read-tab />
   </div>
 </template>
 
 <script>
 import readHeader from '@/components/ReaderHeader'
-import rearTab from '@/components/ReaderTab'
+import readTab from '@/components/ReaderTab'
 
 export default {
   name: 'App',
   components: {
     readHeader,
-    // readTab
+    readTab
   }
 }
 </script>
@@ -26,6 +25,9 @@ export default {
 * {
   margin: 0;
   padding: 0;
+}
+li {
+  list-style: none;
 }
 
 </style>
