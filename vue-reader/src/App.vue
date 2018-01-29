@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style>
-@import url(//at.alicdn.com/t/font_553259_z4dwb9ehvznqm2t9.css);
+@import url(//at.alicdn.com/t/font_553259_tcpf7vtr9zilik9.css);
 
 * {
   margin: 0;
