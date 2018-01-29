@@ -40,3 +40,24 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 * 数据方面，目前的数据还全都是在本组件中写死的，或者是父组件传过来的(还是写死的)。想的是先将页面做的差不多，再去使用axios,Vuex去获取数据和数据的处理，状态的改变。所以，其实组件间的点击事件我都还没有去写。先挖个坑在那把。
 
 ## 一切不以下雪为目的的降温，都是耍流氓(哼，题外话)
+
+----------
+
+### Day 1 （2018.01.29）
+
+* 今天开始动手去处理后台数据的设计
+
+*  引入`Vuex`去统一管理组件的状态
+*  将之前设置在`tuijian.vue`中的data给剥离出来，写到了api文件夹中，但是这个各个页面的状态，数据的模块还没想好怎么去划分开。数据的结构也没想好。
+*  现在的数据的结构还是处于一个实验状态，只是为了熟悉`vuex`的调用action，触发mutation去改变state的一个步骤。
+*  在去获取数据时其中遇到一个问题
+> action中使用commit去告诉mutations修改状态，我本以为commit中使用的参数的名字是可以和对应的mutation的第二个参数(第一个为state)不同的，但是<h3>我错了
+```javascript
+	// action中调用
+	commit(types.RECEIVE_BOOKS, {rdbks})
+	
+	// mutations 中要参数相同
+	[types.RECEIVE_BOOKS] (state, {rdbks}) {
+	    state.recomend_books = rdbks
+	}
+```
