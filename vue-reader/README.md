@@ -61,3 +61,11 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 	    state.recomend_books = rdbks
 	}
 ```
+----------
+
+### Day 2 （2018.01.30）
+
+* 发现点击到其他路由在切回`tuijian`路由时，其中的组件是重新创建过的。因为渲染上去的数据请求时写在组件的`created`生命周期函数中的，意味着每次切换都会消耗资源
+* 搜索过后找的解决方法，在包含对应组建的`router-view`外使用`keep-alive`包裹着，组件就会被缓存到内存中。`keep-alive`还有许多的配置属性:`include`,`exclude`等
+
+#### 今晚下雪啦^-^
