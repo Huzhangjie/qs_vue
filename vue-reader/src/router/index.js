@@ -4,25 +4,30 @@ import bookStore from '@/pages/bookstore'
 import bookShelf from '@/pages/bookshelf'
 import classify from '@/pages/classify'
 import subscribe from '@/pages/subscribe'
-import TuiJian from '@/components/bookstore/TuiJian'
-import KouWei from '@/components/bookstore/KouWei'
-import MianFei from '@/components/bookstore/MianFei'
-import PaiHang from '@/components/bookstore/PaiHang'
-import ZhuanTi from '@/components/bookstore/ZhuanTi'
+import TuiJian from '@/pages/bookstore/TuiJian'
+import KouWei from '@/pages/bookstore/KouWei'
+import MianFei from '@/pages/bookstore/MianFei'
+import PaiHang from '@/pages/bookstore/PaiHang'
+import ZhuanTi from '@/pages/bookstore/ZhuanTi'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
-      redirect: '/bookStore'
+      redirect: '/bookStore/tuijian'
     },
     {
       path: '/bookStore',
       name: '书城',
       component: bookStore,
       children: [{
+          path: '/',
+          redirect: 'tuijian'
+        },
+        {
           path: 'tuijian',
           name: '推荐',
           component: TuiJian
