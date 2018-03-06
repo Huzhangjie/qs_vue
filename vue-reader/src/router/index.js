@@ -17,10 +17,10 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/bookStore/tuijian'
+      redirect: '/bookstore/tuijian'
     },
     {
-      path: '/bookStore',
+      path: '/bookstore',
       name: '书城',
       component: bookStore,
       children: [{
