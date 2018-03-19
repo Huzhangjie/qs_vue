@@ -21,6 +21,7 @@
 <script>
 import TopEditor from 'top-editor/src/lib/TopEditor.vue'
 export default {
+  middleware: 'auth',
   data() {
       return {
           upload: {
