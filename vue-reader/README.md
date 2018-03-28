@@ -20,7 +20,7 @@ npm run build --report
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-# 看到徐玲同学的项目 使用readme记录每一天的进度 这里我也记录一下 ^-^
+<!-- # 看到徐玲同学的项目 使用readme记录每一天的进度 这里我也记录一下 ^-^
 
 ## 先说一下目前已经完成的部分 （截止至2018.01.27 10:00pm）
 
@@ -68,4 +68,4 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 * 发现点击到其他路由在切回`tuijian`路由时，其中的组件是重新创建过的。因为渲染上去的数据请求时写在组件的`created`生命周期函数中的，意味着每次切换都会消耗资源
 * 搜索过后找的解决方法，在包含对应组建的`router-view`外使用`keep-alive`包裹着，组件就会被缓存到内存中。`keep-alive`还有许多的配置属性:`include`,`exclude`等
 
-#### 今晚下雪啦^-^
+#### 今晚下雪啦^-^ -->
